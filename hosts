@@ -1,0 +1,5 @@
+# Archivo /etc/ansible/hosts
+
+[Servidores]
+Servidor1 ansible_host=127.0.0.1 ansible_ssh_user="root" ansible_ssh_pass="root"  
+

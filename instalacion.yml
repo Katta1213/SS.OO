@@ -1,0 +1,35 @@
+---
+- name: Instalacion de utilidades
+  hosts: Servidores
+  remote_user: root
+  tasks:
+  - name: instalar repo epel-release
+    ansible.builtin.yum:
+      name: https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+  - name: instalar repo mysql-community
+    ansible.builtin.yum:
+      name: https://dev.mysql.com/get/mysql80-community-release-el7-6.noarch.rpm
+  - name: desactivar sub-repo mysql 8.0
+    ini_file:
+      dest: /etc/yum.repos.d/mysql-community.repo
+      section: mysql80-community
+      option: enabled
+      value: 0
+  - name: activar sub-repo mysql 5.7
+    ini_file:
+      dest: /etc/yum.repos.d/mysql-community.repo
+      section: mysql57-community
+      option: enabled
+      value: 1
+  - name: desactivar comprobacion de clave 5.7
+    ini_file:
+      dest: /etc/yum.repos.d/mysql-community.repo
+      section: mysql57-community
+      option: gpgcheck
+      value: 0
+  - name: instalar mysql 5.7 
+    ansible.builtin.yum:
+      name: 
+        - mysql 
+        - mysql-community-server
+      
