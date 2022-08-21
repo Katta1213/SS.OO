@@ -7,7 +7,8 @@
         name: admin
         comment: Administrador autorizado para SSH
         group: wheel
-        #contraseña generada con:           python2 -c 'import crypt, getpass,os,base64; print crypt.crypt(getpass.getpass(), "$6$"+base64.b64encode(os.urandom(16))+"$")'
+        #contraseña generada con:   python2 -c 'import crypt, getpass,os,base64; print crypt.crypt(getpass.getpass(), "$6$"+base64.b64encode(os.urandom(16))+"$")'
+        #la contraseña es '1234'
         password: $6$W3IC8oWXNV/FaVrA$F1R55PWTfs.X84EA9OqP7pGKZR0VdH30i.jxNCQKtilOQr3.8NVZE8qsCMwwq8Ipg4gTGZdNdgUPZqgtvNJHu1
 
     - name: añadir al servidor clave ssh para este usuario
