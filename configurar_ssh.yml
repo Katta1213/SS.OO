@@ -1,0 +1,33 @@
+---
+- name: Configuracion de SSH
+  hosts: Servidores
+  tasks:
+
+  - name: Cambiar puerto de SSH a 24153
+    ansible.builtin.lineinfile:
+      path: /etc/ssh/sshd_config
+      regexp: '^#port\ 22'
+      line: Port 24153
+ 
+  - name: Deshabilitar el uso de root a traves de SSH
+    ansible.builtin.lineinfile:
+      path: /etc/ssh/sshd_config
+      regexp: '^#PermitRootLogin\ yes'
+      line: PermitRootLogin no
+
+  - name: Desactivar inicio por contraseña en SSH
+    ansible.builtin.lineinfile:
+      path: /etc/ssh/sshd_config
+      regexp: '^PasswordAuthentication\ yes'
+      line: PasswordAuthentication no
+
+  - name: Restringir SSH a determinados usuarios
+    ansible.builtin.lineinfile:
+      path: /etc/ssh/sshd_config
+      line: AllowUsers admin
+    
+  - name: Reiniciar SSH
+    ansible.builtin.service:
+      name: sshd
+      state: restarted
+      enabled: true
