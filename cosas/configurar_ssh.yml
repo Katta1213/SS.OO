@@ -1,8 +1,4 @@
 ---
-- name: Configuracion de SSH
-  hosts: Servidores
-  tasks:
-
   - name: Cambiar puerto de SSH a 24153
     ansible.builtin.lineinfile:
       path: /etc/ssh/sshd_config
@@ -26,8 +22,8 @@
       path: /etc/ssh/sshd_config
       line: AllowUsers admin
     
-  - name: Reiniciar SSH
-    ansible.builtin.service:
-      name: sshd
-      state: restarted
-      enabled: true
+  - name: reiniciar ssh
+      ansible.builtin.systemd:
+        state: restarted
+        name: sshd
+        enabled: true

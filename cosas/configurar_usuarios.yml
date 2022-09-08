@@ -1,7 +1,4 @@
 ---
-- name: Configurar usuario y copiar clave rsa
-  hosts: Servidores
-  tasks:
     - name: crear usuario administrador
       ansible.builtin.user:
         name: admin

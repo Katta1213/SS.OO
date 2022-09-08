@@ -1,8 +1,4 @@
 ---
-- name: Instalacion de utilidades
-  hosts: Servidores
-  remote_user: root
-  tasks:
   - name: instalar repo epel-release
     ansible.builtin.yum:
       name: https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
