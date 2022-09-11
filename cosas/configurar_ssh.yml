@@ -1,4 +1,8 @@
 ---
+  - name: desactivar SElinux
+    ansible.posix.selinux:
+      state: disabled
+
   - name: Cambiar puerto de SSH a 24153
     ansible.builtin.lineinfile:
       path: /etc/ssh/sshd_config
@@ -23,7 +27,7 @@
       line: AllowUsers admin
     
   - name: reiniciar ssh
-      ansible.builtin.systemd:
-        state: restarted
-        name: sshd
-        enabled: true
+    ansible.builtin.systemd:
+      state: restarted
+      daemon_reload: yes
+      name: sshd

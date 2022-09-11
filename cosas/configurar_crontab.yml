@@ -1,0 +1,16 @@
+---
+  - name: copiar script de respaldo
+    ansible.builtin.copy:
+      src: ./respaldar.sh
+      dest: /root/
+      owner: admin
+      group: wheel
+      mode: u=rwx,g=rx,o=x
+
+  #No en /etc/crontab. En /var/spool/cron/{root<>admin}
+  - name: añadir ejecucion del script de respaldo a crontab
+    ansible.builtin.cron:
+      name: respaldar
+      hour: "*/2"
+      user: admin
+      job: /root/respaldar.sh
