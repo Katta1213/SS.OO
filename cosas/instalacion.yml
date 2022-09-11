@@ -23,9 +23,9 @@
       section: mysql57-community
       option: gpgcheck
       value: 0
-  #- name: instalar mysql 5.7 
-    #ansible.builtin.yum:
-      #name: 
-        #- mysql 
-        #- mysql-community-server
+  - name: instalar mysql 5.7 
+    ansible.builtin.yum:
+      name: 
+        - mysql 
+        - mysql-community-server
       
