@@ -3,6 +3,7 @@
   tasks:
     
     - include_tasks: cosas/instalacion.yml
+    - include_tasks: cosas/configurar_BD.yml
     - include_tasks: cosas/configurar_usuarios.yml
     - include_tasks: cosas/configurar_crontab.yml
     - include_tasks: cosas/configurar_ssh.yml
