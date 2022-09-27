@@ -1,6 +1,7 @@
 ---
   - name: instalar repo epel-release
     ansible.builtin.yum:
+      #name: epel-release
       name: https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
   
   - name: instalar repo mysql-community
@@ -27,21 +28,14 @@
       section: mysql57-community
       option: gpgcheck
       value: 0
-<<<<<<< HEAD
   
-=======
->>>>>>> da34ef249109a7cfbe882ac16de5483638af86fc
   - name: instalar mysql 5.7 
     ansible.builtin.yum:
       name: 
         - mysql 
         - mysql-community-server
-<<<<<<< HEAD
   
   - name: instalar PyMySQL
     ansible.builtin.yum:
       name:
         - python2-PyMySQL    
-=======
-      
->>>>>>> da34ef249109a7cfbe882ac16de5483638af86fc

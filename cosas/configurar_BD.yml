@@ -1,9 +1,9 @@
 ---
 
-  - name: Copiar archivo de credenciales de mysql
-    ansible.builtin.copy:
-      src: cosas/.my.cnf
-      dest: /root
+  #- name: Copiar archivo de credenciales de mysql
+    #ansible.builtin.copy:
+      #src: cosas/.my.cnf
+      #dest: /root
 
   - name: Iniciar servicio   
     ansible.builtin.systemd:
@@ -23,6 +23,10 @@
     debug:
       var: log_var
 
+  - name: Cambiar contraseña para root usando la contraseña temporal
+    shell: mysql -e "SET PASSWORD = PASSWORD('20jCloquitolocoloco#++++');" --connect-expired-password -u root -p"{{ log_var }}"
+    ignore_errors: yes
+
   - name: Copiar dump de la base de datos
     ansible.builtin.copy:
       src: cosas/MySqlDump.sql
@@ -30,7 +34,8 @@
   
   - name: Importar base de datos
     community.mysql.mysql_db:
-      #"{{ log_var }}"
+      login_user: root
+      login_password: 20jCloquitolocoloco#++++ 
       name: InfinitySports
       state: import
       target: /tmp/MySqlDump.sql

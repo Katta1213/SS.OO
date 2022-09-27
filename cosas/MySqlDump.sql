@@ -68,7 +68,7 @@ CREATE TABLE `competencia` (
 
 LOCK TABLES `competencia` WRITE;
 /*!40000 ALTER TABLE `competencia` DISABLE KEYS */;
-INSERT INTO `competencia` VALUES (1,'Copa Libertadores','no lo encotre',NULL,'2021-02-23','2021-11-27'),(2,'Copa Libertadores','no lo encotre',NULL,'2020-01-21','2020-10-27'),(3,'UEFA Liga de Campeones','no lo encotre',NULL,'2021-06-22','2022-05-28'),(4,'UEFA Liga de Campeones','no lo encotre',NULL,'2020-08-08','2021-05-29'),(5,'Eurocopa','no lo encotre',NULL,'2021-06-11','2021-07-11'),(6,'Eurocopa','no lo encotre',NULL,'2019-06-27','2020-08-21'),(7,'Copa América','no lo encotre',NULL,'2021-06-13','2021-07-10'),(8,'Copa América','no lo encotre',NULL,'2019-06-14','2019-07-07'),(9,'Copa Mundial de la FIFA','no lo encotre',NULL,'2021-09-12','2021-10-03'),(10,'Copa Mundial de la FIFA','no lo encotre',NULL,'2019-12-11','2019-12-21');
+INSERT INTO `competencia` VALUES (1,'Copa Libertadores','no lo encotre','D:\\Users\\Loliconario\\Desktop\\Imagenes\\Competencias\\Competencia (1).png','2021-02-23','2021-11-27'),(2,'Copa Libertadores','no lo encotre','D:\\Users\\Loliconario\\Desktop\\Imagenes\\Competencias\\Competencia (2).png','2020-01-21','2020-10-27'),(3,'UEFA Liga de Campeones','no lo encotre','D:\\Users\\Loliconario\\Desktop\\Imagenes\\Competencias\\Competencia (3).png','2021-06-22','2022-05-28'),(4,'UEFA Liga de Campeones','no lo encotre','D:\\Users\\Loliconario\\Desktop\\Imagenes\\Competencias\\Competencia (4).png','2020-08-08','2021-05-29'),(5,'Eurocopa','no lo encotre','D:\\Users\\Loliconario\\Desktop\\Imagenes\\Competencias\\Competencia (5).png','2021-06-11','2021-07-11'),(6,'Eurocopa','no lo encotre','D:\\Users\\Loliconario\\Desktop\\Imagenes\\Competencias\\Competencia (6).png','2019-06-27','2020-08-21'),(7,'Copa América','no lo encotre','D:\\Users\\Loliconario\\Desktop\\Imagenes\\Competencias\\Competencia (7).png','2021-06-13','2021-07-10'),(8,'Copa América','no lo encotre','D:\\Users\\Loliconario\\Desktop\\Imagenes\\Competencias\\Competencia (8).png','2019-06-14','2019-07-07'),(9,'Copa Mundial de la FIFA','no lo encotre','D:\\Users\\Loliconario\\Desktop\\Imagenes\\Competencias\\Competencia (9).png','2021-09-12','2021-10-03'),(10,'Copa Mundial de la FIFA','no lo encotre','D:\\Users\\Loliconario\\Desktop\\Imagenes\\Competencias\\Competencia (10).png','2019-12-11','2019-12-21');
 /*!40000 ALTER TABLE `competencia` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!50003 SET @saved_cs_client      = @@character_set_client */ ;
@@ -117,7 +117,7 @@ CREATE TABLE `deporte` (
 
 LOCK TABLES `deporte` WRITE;
 /*!40000 ALTER TABLE `deporte` DISABLE KEYS */;
-INSERT INTO `deporte` VALUES (1,'FootBall Americano',NULL),(2,'FootBall',NULL),(3,'Basketball',NULL),(4,'BaseBall',NULL),(5,'Tennis',NULL),(6,'Volleyball',NULL),(7,'Rugby',NULL),(8,'Ajedrez',NULL),(9,'Poker',NULL),(10,'Boxeo',NULL),(11,'MMA/Artes Marciales Mixtas',NULL),(12,'Lucha libre',NULL),(13,'Badminton',NULL),(14,'CSGO',NULL),(15,'DOTA 2',NULL),(16,'Valorant',NULL),(17,'Rocket League',NULL),(18,'NASCAR',NULL),(19,'Carreras Formula',NULL),(20,'Moto GP',NULL),(21,'BMX',NULL);
+INSERT INTO `deporte` VALUES (1,'FootBall Americano','D:\\Users\\Loliconario\\Desktop\\Imagenes\\Deportes\\FootBall Americano.png'),(2,'FootBall','D:\\Users\\Loliconario\\Desktop\\Imagenes\\Deportes\\FootBall.png'),(3,'Basketball','D:\\Users\\Loliconario\\Desktop\\Imagenes\\Deportes\\BascketBall.png'),(4,'BaseBall','D:\\Users\\Loliconario\\Desktop\\Imagenes\\Deportes\\BaseBall.png'),(5,'Tennis','D:\\Users\\Loliconario\\Desktop\\Imagenes\\Deportes\\Tenis.png'),(6,'Volleyball','D:\\Users\\Loliconario\\Desktop\\Imagenes\\Deportes\\VolleyBall.png'),(7,'Rugby',NULL),(8,'Ajedrez','D:\\Users\\Loliconario\\Desktop\\Imagenes\\Deportes\\Ajedrez.png'),(9,'Poker','D:\\Users\\Loliconario\\Desktop\\Imagenes\\Deportes\\Pocker.png'),(10,'Boxeo','D:\\Users\\Loliconario\\Desktop\\Imagenes\\Deportes\\Boxeo.png'),(11,'MMA/Artes Marciales Mixtas',NULL),(12,'Lucha libre',NULL),(13,'Badminton',NULL),(14,'CSGO',NULL),(15,'DOTA 2','D:\\Users\\Loliconario\\Desktop\\Imagenes\\Deportes\\DOTA 2.png'),(16,'Valorant',NULL),(17,'Rocket League','D:\\Users\\Loliconario\\Desktop\\Imagenes\\Deportes\\Rocket League.png'),(18,'NASCAR',NULL),(19,'Carreras Formula',NULL),(20,'Moto GP',NULL),(21,'BMX',NULL);
 /*!40000 ALTER TABLE `deporte` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -138,7 +138,7 @@ CREATE TABLE `deportista` (
   `Pais` varchar(20) NOT NULL,
   `FechaDeNacimiento` date DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -147,7 +147,7 @@ CREATE TABLE `deportista` (
 
 LOCK TABLES `deportista` WRITE;
 /*!40000 ALTER TABLE `deportista` DISABLE KEYS */;
-INSERT INTO `deportista` VALUES (1,'Alejandro',NULL,'Mendez','Mendez',NULL,'EEUU','2019-01-23'),(2,'Arnulfo',NULL,'Carrera','García',NULL,'EEUU','2019-01-23'),(3,'Bernardo',NULL,'López',NULL,NULL,'EEUU','2019-01-23'),(4,'Carlos',NULL,'Cetino','Ruiz',NULL,'EEUU','2019-01-23'),(5,'Carlos','Crispín','Aliñado','Asturias',NULL,'EEUU','2019-01-23'),(6,'César','Augusto','Noriega','Morales',NULL,'EEUU','2019-01-23'),(7,'Edgar','Raúl','Culajay',NULL,NULL,'EEUU','2019-01-23'),(8,'Eliza',NULL,'Pirír','Sabán',NULL,'EEUU','2019-01-23'),(9,'Fermina',NULL,'Chajón','Soto',NULL,'EEUU','2019-01-23'),(10,'Héctor','Leónidas','Revolorio','Quevedo',NULL,'EEUU','2019-01-23'),(11,'Hugo','Leonel','López','Villacorta',NULL,'EEUU','2019-01-23'),(12,'José',NULL,'Muchuch','Chutá',NULL,'EEUU','2019-01-23'),(13,'Manuel',NULL,'Encarnación','Alarcón',NULL,'EEUU','2019-01-23'),(14,'Marco','Tulio','Soto','Juárez',NULL,'EEUU','2019-01-23'),(15,'María','Inés','Vásquez',NULL,NULL,'EEUU','2019-01-23'),(16,'Mario','Anibal','Alemán','Galindo',NULL,'EEUU','2019-01-23'),(17,'Mario',NULL,'Izariel','Villatoro',NULL,'EEUU','2019-01-23'),(18,'Nancy','Beatriz','Calderón','Muller',NULL,'EEUU','2019-01-23'),(19,'Octaviano',NULL,'Camey','Ramírez',NULL,'EEUU','2019-01-23'),(20,'Osman',NULL,'Rosales','Arias',NULL,'EEUU','2019-01-23');
+INSERT INTO `deportista` VALUES (1,'Enzo','Augusto','Sgüillaro','Cubitto','D:\\Users\\Loliconario\\Desktop\\Imagenes\\ESI\\enzo.png','Uruguay','2000-01-23'),(2,'Gonzalo','Gabriel','Maritnez',NULL,'D:\\Users\\Loliconario\\Desktop\\Imagenes\\ESI\\gonzalo.png','Uruguay','2000-11-24'),(3,'Momo',NULL,'Martinez',NULL,'D:\\Users\\Loliconario\\Desktop\\Imagenes\\ESI\\momo.png','Uruguay','2000-11-24'),(4,'Alejandro',NULL,'Mendez','Mendez','D:\\Users\\Loliconario\\Desktop\\Imagenes\\Deportistas\\Deportista (1).png','EEUU','2019-01-23'),(5,'Arnulfo',NULL,'Carrera','García','D:\\Users\\Loliconario\\Desktop\\Imagenes\\Deportistas\\Deportista (2).png','EEUU','2019-01-23'),(6,'Bernardo',NULL,'López',NULL,'D:\\Users\\Loliconario\\Desktop\\Imagenes\\Deportistas\\Deportista (3).png','EEUU','2019-01-23'),(7,'Carlos',NULL,'Cetino','Ruiz','D:\\Users\\Loliconario\\Desktop\\Imagenes\\Deportistas\\Deportista (4).png','EEUU','2019-01-23'),(8,'Carlos','Crispín','Aliñado','Asturias','D:\\Users\\Loliconario\\Desktop\\Imagenes\\Deportistas\\Deportista (4).png','EEUU','2019-01-23'),(9,'César','Augusto','Noriega','Morales','D:\\Users\\Loliconario\\Desktop\\Imagenes\\Deportistas\\Deportista (5).png','EEUU','2019-01-23'),(10,'Edgar','Raúl','Culajay',NULL,'D:\\Users\\Loliconario\\Desktop\\Imagenes\\Deportistas\\Deportista (6).png','EEUU','2019-01-23'),(11,'Eliza',NULL,'Pirír','Sabán','D:\\Users\\Loliconario\\Desktop\\Imagenes\\Deportistas\\Deportista (7).png','EEUU','2019-01-23'),(12,'Fermina',NULL,'Chajón','Soto','D:\\Users\\Loliconario\\Desktop\\Imagenes\\Deportistas\\Deportista (8).png','EEUU','2019-01-23'),(13,'Héctor','Leónidas','Revolorio','Quevedo','D:\\Users\\Loliconario\\Desktop\\Imagenes\\Deportistas\\Deportista (9).png','EEUU','2019-01-23'),(14,'Hugo','Leonel','López','Villacorta','D:\\Users\\Loliconario\\Desktop\\Imagenes\\Deportistas\\Deportista (10).png','EEUU','2019-01-23'),(15,'José',NULL,'Muchuch','Chutá','D:\\Users\\Loliconario\\Desktop\\Imagenes\\Deportistas\\Deportista (11).png','EEUU','2019-01-23'),(16,'Manuel',NULL,'Encarnación','Alarcón','D:\\Users\\Loliconario\\Desktop\\Imagenes\\Deportistas\\Deportista (12).png','EEUU','2019-01-23'),(17,'Marco','Tulio','Soto','Juárez','D:\\Users\\Loliconario\\Desktop\\Imagenes\\Deportistas\\Deportista (13).png','EEUU','2019-01-23'),(18,'María','Inés','Vásquez',NULL,'D:\\Users\\Loliconario\\Desktop\\Imagenes\\Deportistas\\Deportista (14).png','EEUU','2019-01-23'),(19,'Mario','Anibal','Alemán','Galindo',NULL,'EEUU','2019-01-23'),(20,'Mario',NULL,'Izariel','Villatoro',NULL,'EEUU','2019-01-23'),(21,'Nancy','Beatriz','Calderón','Muller',NULL,'EEUU','2019-01-23'),(22,'Octaviano',NULL,'Camey','Ramírez',NULL,'EEUU','2019-01-23'),(23,'Osman',NULL,'Rosales','Arias',NULL,'EEUU','2019-01-23');
 /*!40000 ALTER TABLE `deportista` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -241,6 +241,7 @@ DROP TABLE IF EXISTS `encuentro`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `encuentro` (
   `Id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `Nombre` varchar(30) NOT NULL,
   `Fecha` datetime NOT NULL,
   `Lugar` varchar(30) DEFAULT NULL,
   PRIMARY KEY (`Id`)
@@ -253,7 +254,7 @@ CREATE TABLE `encuentro` (
 
 LOCK TABLES `encuentro` WRITE;
 /*!40000 ALTER TABLE `encuentro` DISABLE KEYS */;
-INSERT INTO `encuentro` VALUES (1,'2021-03-23 00:00:00','no se'),(2,'2020-03-23 00:00:00','no se'),(3,'2021-04-23 00:00:00','no se'),(4,'2021-05-23 00:00:00','no se'),(5,'2021-06-23 00:00:00','no se'),(6,'2021-03-21 00:00:00','no se'),(7,'2021-03-21 04:00:00','no se'),(8,'2020-03-23 00:00:00','no se'),(9,'2021-04-30 00:00:00','no se'),(10,'2021-01-23 00:00:00','no se'),(11,'2018-03-23 00:00:00','no se'),(12,'2018-03-23 00:00:00','no se'),(13,'2018-04-23 00:00:00','no se'),(14,'2018-05-23 00:00:00','no se'),(15,'2018-06-23 00:00:00','no se'),(16,'2018-03-21 00:00:00','no se'),(17,'2018-03-21 04:00:00','no se'),(18,'2018-03-23 00:00:00','no se'),(19,'2018-04-30 00:00:00','no se'),(20,'2018-01-23 00:00:00','no se'),(21,'2019-03-23 00:00:00','no se'),(22,'2019-03-23 00:00:00','no se'),(23,'2019-04-23 00:00:00','no se'),(24,'2019-05-23 00:00:00','no se'),(25,'2019-06-23 00:00:00','no se'),(26,'2019-03-21 00:00:00','no se'),(27,'2019-03-21 04:00:00','no se'),(28,'2019-03-23 00:00:00','no se'),(29,'2019-04-30 00:00:00','no se'),(30,'2019-01-23 00:00:00','no se');
+INSERT INTO `encuentro` VALUES (1,'no tengo ganas de llenar esto','2021-03-23 00:00:00','no se'),(2,'no tengo ganas de llenar esto','2020-03-23 00:00:00','no se'),(3,'no tengo ganas de llenar esto','2021-04-23 00:00:00','no se'),(4,'no tengo ganas de llenar esto','2021-05-23 00:00:00','no se'),(5,'no tengo ganas de llenar esto','2021-06-23 00:00:00','no se'),(6,'no tengo ganas de llenar esto','2021-03-21 00:00:00','no se'),(7,'no tengo ganas de llenar esto','2021-03-21 04:00:00','no se'),(8,'no tengo ganas de llenar esto','2020-03-23 00:00:00','no se'),(9,'no tengo ganas de llenar esto','2021-04-30 00:00:00','no se'),(10,'no tengo ganas de llenar esto','2021-01-23 00:00:00','no se'),(11,'no tengo ganas de llenar esto','2018-03-23 00:00:00','no se'),(12,'no tengo ganas de llenar esto','2018-03-23 00:00:00','no se'),(13,'no tengo ganas de llenar esto','2018-04-23 00:00:00','no se'),(14,'no tengo ganas de llenar esto','2018-05-23 00:00:00','no se'),(15,'no tengo ganas de llenar esto','2018-06-23 00:00:00','no se'),(16,'no tengo ganas de llenar esto','2018-03-21 00:00:00','no se'),(17,'no tengo ganas de llenar esto','2018-03-21 04:00:00','no se'),(18,'no tengo ganas de llenar esto','2018-03-23 00:00:00','no se'),(19,'no tengo ganas de llenar esto','2018-04-30 00:00:00','no se'),(20,'no tengo ganas de llenar esto','2018-01-23 00:00:00','no se'),(21,'no tengo ganas de llenar esto','2019-03-23 00:00:00','no se'),(22,'no tengo ganas de llenar esto','2019-03-23 00:00:00','no se'),(23,'no tengo ganas de llenar esto','2019-04-23 00:00:00','no se'),(24,'no tengo ganas de llenar esto','2019-05-23 00:00:00','no se'),(25,'no tengo ganas de llenar esto','2019-06-23 00:00:00','no se'),(26,'no tengo ganas de llenar esto','2019-03-21 00:00:00','no se'),(27,'no tengo ganas de llenar esto','2019-03-21 04:00:00','no se'),(28,'no tengo ganas de llenar esto','2019-03-23 00:00:00','no se'),(29,'no tengo ganas de llenar esto','2019-04-30 00:00:00','no se'),(30,'no tengo ganas de llenar esto','2019-01-23 00:00:00','no se');
 /*!40000 ALTER TABLE `encuentro` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -281,7 +282,7 @@ CREATE TABLE `eparticipaen` (
 
 LOCK TABLES `eparticipaen` WRITE;
 /*!40000 ALTER TABLE `eparticipaen` DISABLE KEYS */;
-INSERT INTO `eparticipaen` VALUES (7,7,4),(15,1,1),(16,1,2),(16,7,400),(17,2,1),(18,3,1),(19,4,1),(20,4,1),(21,5,1),(22,6,1),(23,7,1),(24,8,1),(24,9,1),(24,10,4);
+INSERT INTO `eparticipaen` VALUES (15,1,1),(16,1,2),(17,2,1),(18,3,1),(19,4,1),(20,4,1),(21,5,1),(22,6,1),(23,7,1),(24,8,1),(24,9,1),(24,10,4);
 /*!40000 ALTER TABLE `eparticipaen` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!50003 SET @saved_cs_client      = @@character_set_client */ ;
@@ -349,7 +350,7 @@ CREATE TABLE `equipo` (
   `Pais` varchar(20) NOT NULL,
   `FechaCreacion` date DEFAULT NULL,
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=35 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=36 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -358,7 +359,7 @@ CREATE TABLE `equipo` (
 
 LOCK TABLES `equipo` WRITE;
 /*!40000 ALTER TABLE `equipo` DISABLE KEYS */;
-INSERT INTO `equipo` VALUES (1,'Barcelona',NULL,'Uruguay','2019-01-23'),(2,'Bayern Munich',NULL,'Uruguay','2019-01-23'),(3,'Inter',NULL,'no se','2019-01-23'),(4,'BATE',NULL,'no se','2019-01-23'),(5,'River Plate',NULL,'no se','2019-01-23'),(6,'Roma',NULL,'no se','2019-01-23'),(7,'Galatasaray',NULL,'no se','2019-01-23'),(8,'Monaco',NULL,'no se','2019-01-23'),(9,'Aston Villa',NULL,'no se','2019-01-23'),(10,'Olimpia',NULL,'no se','2019-01-23'),(11,'Santos',NULL,'no se','2019-01-23'),(12,'Zenit',NULL,'no se','2019-01-23'),(13,'Santa Cruz',NULL,'no se','2019-01-23'),(14,'RCD Espanyol',NULL,'no se','2019-01-23'),(15,'Alejandro Mendez Mendez',NULL,'EEUU','2019-01-23'),(16,'Arnulfo Carrera García',NULL,'EEUU','2019-01-23'),(17,'Bernardo López',NULL,'EEUU','2019-01-23'),(18,'Carlos Cetino Ruiz',NULL,'EEUU','2019-01-23'),(19,'Carlos Crispín Aliñado Asturias',NULL,'EEUU','2019-01-23'),(20,'César Augusto Noriega Morales',NULL,'EEUU','2019-01-23'),(21,'Edgar Raúl Culajay',NULL,'EEUU','2019-01-23'),(22,'Eliza Pirír Sabán',NULL,'EEUU','2019-01-23'),(23,'Fermina Chajón Soto',NULL,'EEUU','2019-01-23'),(24,'Héctor Leónidas Revolorio Quevedo',NULL,'EEUU','2019-01-23'),(25,'Hugo Leonel López Villacorta',NULL,'EEUU','2019-01-23'),(26,'José Muchuch Chutá',NULL,'EEUU','2019-01-23'),(27,'Manuel Encarnación Alarcón',NULL,'EEUU','2019-01-23'),(28,'Marco Tulio Soto Juárez',NULL,'EEUU','2019-01-23'),(29,'María Inés Vásquez',NULL,'EEUU','2019-01-23'),(30,'Mario Anibal Alemán Galindo',NULL,'EEUU','2019-01-23'),(31,'Mario Izariel Villatoro',NULL,'EEUU','2019-01-23'),(32,'Nancy Beatriz Calderón Muller',NULL,'EEUU','2019-01-23'),(33,'Octaviano Camey Ramírez',NULL,'EEUU','2019-01-23'),(34,'Osman Rosales Arias',NULL,'EEUU','2019-01-23');
+INSERT INTO `equipo` VALUES (1,'ESI','D:\\Users\\Loliconario\\Desktop\\Imagenes\\ESI\\ESI.png','Uruguay','2019-01-23'),(2,'Barcelona','D:\\Users\\Loliconario\\Desktop\\Imagenes\\Equipos\\Equipo (1).png','Uruguay','2019-01-23'),(3,'Bayern Munich','D:\\Users\\Loliconario\\Desktop\\Imagenes\\Equipos\\Equipo (2).png','Uruguay','2019-01-23'),(4,'Inter','D:\\Users\\Loliconario\\Desktop\\Imagenes\\Equipos\\Equipo (3).png','no se','2019-01-23'),(5,'BATE','D:\\Users\\Loliconario\\Desktop\\Imagenes\\Equipos\\Equipo (4).png','no se','2019-01-23'),(6,'River Plate','D:\\Users\\Loliconario\\Desktop\\Imagenes\\Equipos\\Equipo (5).png','no se','2019-01-23'),(7,'Roma','D:\\Users\\Loliconario\\Desktop\\Imagenes\\Equipos\\Equipo (6).png','no se','2019-01-23'),(8,'Galatasaray','D:\\Users\\Loliconario\\Desktop\\Imagenes\\Equipos\\Equipo (7).png','no se','2019-01-23'),(9,'Monaco','D:\\Users\\Loliconario\\Desktop\\Imagenes\\Equipos\\Equipo (8).png','no se','2019-01-23'),(10,'Aston Villa','D:\\Users\\Loliconario\\Desktop\\Imagenes\\Equipos\\Equipo (9).png','no se','2019-01-23'),(11,'Olimpia','D:\\Users\\Loliconario\\Desktop\\Imagenes\\Equipos\\Equipo (10).png','no se','2019-01-23'),(12,'Santos','D:\\Users\\Loliconario\\Desktop\\Imagenes\\Equipos\\Equipo (11).png','no se','2019-01-23'),(13,'Zenit','D:\\Users\\Loliconario\\Desktop\\Imagenes\\Equipos\\Equipo (12).png','no se','2019-01-23'),(14,'Santa Cruz','D:\\Users\\Loliconario\\Desktop\\Imagenes\\Equipos\\Equipo (13).png','no se','2019-01-23'),(15,'RCD Espanyol','D:\\Users\\Loliconario\\Desktop\\Imagenes\\Equipos\\Equipo (14).png','no se','2019-01-23'),(16,'Alejandro Mendez Mendez','D:\\Users\\Loliconario\\Desktop\\Imagenes\\Equipos\\Equipo (15).png','EEUU','2019-01-23'),(17,'Arnulfo Carrera García',NULL,'EEUU','2019-01-23'),(18,'Bernardo López',NULL,'EEUU','2019-01-23'),(19,'Carlos Cetino Ruiz',NULL,'EEUU','2019-01-23'),(20,'Carlos Crispín Aliñado Asturias',NULL,'EEUU','2019-01-23'),(21,'César Augusto Noriega Morales',NULL,'EEUU','2019-01-23'),(22,'Edgar Raúl Culajay',NULL,'EEUU','2019-01-23'),(23,'Eliza Pirír Sabán',NULL,'EEUU','2019-01-23'),(24,'Fermina Chajón Soto',NULL,'EEUU','2019-01-23'),(25,'Héctor Leónidas Revolorio Quevedo',NULL,'EEUU','2019-01-23'),(26,'Hugo Leonel López Villacorta',NULL,'EEUU','2019-01-23'),(27,'José Muchuch Chutá',NULL,'EEUU','2019-01-23'),(28,'Manuel Encarnación Alarcón',NULL,'EEUU','2019-01-23'),(29,'Marco Tulio Soto Juárez',NULL,'EEUU','2019-01-23'),(30,'María Inés Vásquez',NULL,'EEUU','2019-01-23'),(31,'Mario Anibal Alemán Galindo',NULL,'EEUU','2019-01-23'),(32,'Mario Izariel Villatoro',NULL,'EEUU','2019-01-23'),(33,'Nancy Beatriz Calderón Muller',NULL,'EEUU','2019-01-23'),(34,'Octaviano Camey Ramírez',NULL,'EEUU','2019-01-23'),(35,'Osman Rosales Arias',NULL,'EEUU','2019-01-23');
 /*!40000 ALTER TABLE `equipo` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -470,7 +471,7 @@ CREATE TABLE `participaen` (
 
 LOCK TABLES `participaen` WRITE;
 /*!40000 ALTER TABLE `participaen` DISABLE KEYS */;
-INSERT INTO `participaen` VALUES (1,15,1,NULL,10),(2,16,1,NULL,10),(2,16,2,NULL,10),(2,16,7,NULL,12),(3,17,2,NULL,10),(3,17,3,NULL,10),(4,5,7,NULL,12),(4,18,3,NULL,10),(4,18,4,NULL,10),(5,19,4,NULL,10),(5,19,5,NULL,10),(6,7,7,NULL,12),(6,20,4,NULL,10),(6,20,6,NULL,10),(7,21,5,NULL,10),(8,22,6,NULL,10),(9,23,7,NULL,10),(10,24,8,NULL,10),(10,24,9,NULL,10),(10,24,10,NULL,10);
+INSERT INTO `participaen` VALUES (1,15,1,NULL,10),(2,16,1,NULL,10),(2,16,2,NULL,10),(3,17,2,NULL,10),(3,17,3,NULL,10),(4,18,3,NULL,10),(4,18,4,NULL,10),(5,19,4,NULL,10),(5,19,5,NULL,10),(6,20,4,NULL,10),(6,20,6,NULL,10),(7,21,5,NULL,10),(8,22,6,NULL,10),(9,23,7,NULL,10),(10,24,8,NULL,10),(10,24,9,NULL,10),(10,24,10,NULL,10);
 /*!40000 ALTER TABLE `participaen` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!50003 SET @saved_cs_client      = @@character_set_client */ ;
@@ -564,7 +565,7 @@ CREATE TABLE `sepracticadeporte` (
   PRIMARY KEY (`IdCompetencia`,`Nombre`,`IdDeporte`),
   KEY `IdDeporte` (`IdDeporte`),
   CONSTRAINT `sepracticadeporte_ibfk_1` FOREIGN KEY (`IdCompetencia`, `Nombre`) REFERENCES `etapa` (`IdCompetencia`, `Nombre`) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT `sepracticadeporte_ibfk_2` FOREIGN KEY (`IdDeporte`) REFERENCES `deporte` (`Id`) ON DELETE CASCADE
+  CONSTRAINT `sepracticadeporte_ibfk_2` FOREIGN KEY (`IdDeporte`) REFERENCES `deporte` (`Id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -852,12 +853,84 @@ DELIMITER ;
 /*!50003 SET collation_connection  = @saved_col_connection */ ;
 
 --
+-- Temporary view structure for view `vista_detallesdeetapa`
+--
+
+DROP TABLE IF EXISTS `vista_detallesdeetapa`;
+/*!50001 DROP VIEW IF EXISTS `vista_detallesdeetapa`*/;
+SET @saved_cs_client     = @@character_set_client;
+/*!50503 SET character_set_client = utf8mb4 */;
+/*!50001 CREATE VIEW `vista_detallesdeetapa` AS SELECT 
+ 1 AS `IdCompetencia`,
+ 1 AS `Nombre`,
+ 1 AS `Lugar`,
+ 1 AS `Deporte`,
+ 1 AS `IdDeporte`*/;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Temporary view structure for view `vista_detallesencuentro`
+--
+
+DROP TABLE IF EXISTS `vista_detallesencuentro`;
+/*!50001 DROP VIEW IF EXISTS `vista_detallesencuentro`*/;
+SET @saved_cs_client     = @@character_set_client;
+/*!50503 SET character_set_client = utf8mb4 */;
+/*!50001 CREATE VIEW `vista_detallesencuentro` AS SELECT 
+ 1 AS `IdCompetencia`,
+ 1 AS `NombreEtapa`,
+ 1 AS `EncuentroId`,
+ 1 AS `EquipoId`,
+ 1 AS `EquipoNombre`,
+ 1 AS `DeportistaId`,
+ 1 AS `DeportistaNombre`,
+ 1 AS `Anotacion`,
+ 1 AS `Puntaje`*/;
+SET character_set_client = @saved_cs_client;
+
+--
 -- Dumping events for database 'infinitysports'
 --
 
 --
 -- Dumping routines for database 'infinitysports'
 --
+
+--
+-- Final view structure for view `vista_detallesdeetapa`
+--
+
+/*!50001 DROP VIEW IF EXISTS `vista_detallesdeetapa`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8mb4 */;
+/*!50001 SET character_set_results     = utf8mb4 */;
+/*!50001 SET collation_connection      = utf8mb4_general_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `vista_detallesdeetapa` AS select `e`.`IdCompetencia` AS `IdCompetencia`,`e`.`Nombre` AS `Nombre`,`e`.`Lugar` AS `Lugar`,`d`.`Nombre` AS `Deporte`,`d`.`Id` AS `IdDeporte` from ((`etapa` `e` join `sepracticadeporte` `se` on(((`e`.`IdCompetencia` = `se`.`IdCompetencia`) and (`e`.`Nombre` = `se`.`Nombre`)))) join `deporte` `d` on((`d`.`Id` = `se`.`IdDeporte`))) */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
+-- Final view structure for view `vista_detallesencuentro`
+--
+
+/*!50001 DROP VIEW IF EXISTS `vista_detallesencuentro`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8mb4 */;
+/*!50001 SET character_set_results     = utf8mb4 */;
+/*!50001 SET collation_connection      = utf8mb4_general_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `vista_detallesencuentro` AS select `ee`.`IdCompetencia` AS `IdCompetencia`,`ee`.`NombreEtapa` AS `NombreEtapa`,`en`.`Id` AS `EncuentroId`,`eq`.`Id` AS `EquipoId`,`eq`.`Nombre` AS `EquipoNombre`,`d`.`Id` AS `DeportistaId`,concat(`d`.`PrimerNombre`,' ',coalesce(`d`.`SegundoNombre`,''),' ',`d`.`PrimerApellido`,' ',coalesce(`d`.`SegundoApellido`,'')) AS `DeportistaNombre`,concat(coalesce(`p`.`Puntaje`,''),coalesce(`p`.`Tiempo`,'')) AS `Anotacion`,`een`.`Puntaje` AS `Puntaje` from (((((`econtienee` `ee` join `encuentro` `en` on((`en`.`Id` = `ee`.`IdEncuentro`))) join `participaen` `p` on((`p`.`IdEncuentro` = `en`.`Id`))) join `equipo` `eq` on((`eq`.`Id` = `p`.`IdEquipo`))) join `deportista` `d` on((`d`.`Id` = `p`.`IdDeportista`))) left join `eparticipaen` `een` on(((`een`.`IdEncuentro` = `en`.`Id`) and (`p`.`IdEquipo` = `een`.`IdEquipo`)))) */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -868,4 +941,4 @@ DELIMITER ;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-09-02 14:47:49
+-- Dump completed on 2022-09-24 23:06:21
