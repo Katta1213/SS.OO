@@ -36,6 +36,6 @@
     community.mysql.mysql_db:
       login_user: root
       login_password: 20jCloquitolocoloco#++++ 
-      name: InfinitySports
+      name: codelaw
       state: import
       target: /tmp/MySqlDump.sql
