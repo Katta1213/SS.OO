@@ -5,3 +5,4 @@ Necesario ejecutar previamente:
 
         ansible-galaxy collection install ansible.posix
         ansible-galaxy collection install community.mysql
+        ansible-galaxy collection install community.crypto
