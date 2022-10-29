@@ -1,0 +1,6 @@
+---
+  - name: Copiar clave obtenida en 'crear_y_obtener_clave_rsa.yml'
+    ansible.posix.authorized_key:
+      user: admin
+      state: present
+      key: "{{ lookup('file', '/tmp/clave/id_rsa.pub') }}"

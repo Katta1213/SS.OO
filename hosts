@@ -8,5 +8,11 @@
 #   - You can enter hostnames or ip addresses
 #   - A hostname/ip can be a member of multiple groups
 
-[Servidores]
-192.168.165.180 anisble_ssh_user="root" ansible_ssh_pass="toor" ansible_port=22
+[Servidores_BD]
+192.168.32.117 anisble_ssh_user="root" ansible_ssh_pass="root" ansible_port=22
+
+[Servidores_Replicacion_BD]
+192.168.32.100 anisble_ssh_user="root" ansible_ssh_pass="root" ansible_port=22
+
+[Servidores_Respaldo]
+192.168.32.180 anisble_ssh_user="root" ansible_ssh_pass="root" ansible_port=22

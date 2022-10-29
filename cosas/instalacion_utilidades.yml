@@ -1,0 +1,9 @@
+---
+  - name: instalar repo epel-release
+    ansible.builtin.yum:
+      #name: epel-release
+      name: https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+
+  - name: instalar Rsync
+    ansible.builtin.yum:
+      name: rsync

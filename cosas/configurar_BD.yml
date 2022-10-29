@@ -12,12 +12,12 @@
       name: mysqld 
     
   - name: leer log de MySql
-    shell:
+    ansible.builtin.shell:
       cmd: cat /var/log/mysqld.log | grep "A temporary password"
     register: log_mysql
 
   - set_fact:
-      log_var: "{{ log_mysql.stdout | regex_search('[^: ]*$') }}"
+      log_var: "{{ log_mysql.stdout | regex_search('(?<=: )(.*)$') }}"
 
   - name: mostrar a ver
     debug:
@@ -39,3 +39,12 @@
       name: codelaw
       state: import
       target: /tmp/MySqlDump.sql
+
+  - name: Crear usuario para la ejecucion de los triggers, (el que aparece como definer en el mysqldump)
+    community.mysql.mysql_user:
+      login_user: root
+      login_password: 20jCloquitolocoloco#++++
+      state: present
+      name: diego.ibanez
+      password: fraganciadesomunal
+      priv: "*.*:ALL,GRANT"

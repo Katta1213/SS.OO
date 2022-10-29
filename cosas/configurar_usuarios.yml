@@ -8,9 +8,10 @@
         #la contraseña es '1234'
         password: $6$W3IC8oWXNV/FaVrA$F1R55PWTfs.X84EA9OqP7pGKZR0VdH30i.jxNCQKtilOQr3.8NVZE8qsCMwwq8Ipg4gTGZdNdgUPZqgtvNJHu1
 
-    - name: añadir al servidor clave ssh para este usuario
-      ansible.builtin.authorized_key:
+    - name: enviar clave publica para acceder con el usuario admin
+      ansible.posix.authorized_key:
         user: admin
         state: present
-        #contraseña de la clave "12345"
-        key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC8YYROMhr3KyQWSoxT9EvuqFZ7jyEML6pYJEaEiSbGK7C7eZ5dTw2YVetCHIYG38Jr/zpROx3fn5GQRuuFAWniV7+WcO7ha/mNE0M06+eXeDODgmOvHtb2sqN9RTnAgGX0Y4dQ+7pPA/N6n/gavCYs5IGbaqQvvJTCemzfT/9Jf3JvGJCUfpgaJffF4NeCuzaMOUUgP/Qr+iFSSICcFLEm5klek56iIqmsbGR0rCHSYsbwPWvKAVVuPiSdwvIr6sCom1teJIs8C7VGlPeTk/74M0xRhomWjS0g/EJojVJ/t1JUdwZ7MTfwjHMEHn8D8AY2wexWkdbapHz+jcPlUJYt root@localhost.localdomain
+        key: "{{ lookup('file', '/root/.ssh/id_rsa.pub') }}"
+
+    

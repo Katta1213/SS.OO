@@ -6,9 +6,16 @@
   - name: Cambiar puerto de SSH a 24153
     ansible.builtin.lineinfile:
       path: /etc/ssh/sshd_config
-      regexp: '^#port\ 22'
+      regexp: '^#Port\ 22'
       line: Port 24153
  
+  - name: Agregar exlusion del firewall al puerto 24153
+    ansible.posix.firewalld:
+      port: 24153/tcp
+      permanent: yes
+      immediate: yes
+      state: enabled
+  
   - name: Deshabilitar el uso de root a traves de SSH
     ansible.builtin.lineinfile:
       path: /etc/ssh/sshd_config
