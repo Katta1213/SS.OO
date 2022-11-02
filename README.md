@@ -1,5 +1,7 @@
 # SS.OO
 
+Necesario establecer manualmente la IP del servidor de respaldo en el archvo respaldar.sh
+
 Necesario ejecutar previamente:
 
 
