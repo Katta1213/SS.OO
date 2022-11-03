@@ -1,16 +1,17 @@
 ---
   - name: Crear directorio para las claves RSA.
     ansible.builtin.file:
-      path: /root/.ssh
+      path: /home/admin/.ssh
       state: directory
 
   - name: Generar par de claves RSA.
     community.crypto.openssh_keypair:
       force: yes
-      path: /root/.ssh/id_rsa    
+      owner: admin
+      path: /home/admin/.ssh/id_rsa    
 
   - name: Copiar clave publica a la maquina local   
     ansible.builtin.fetch:
-      src: /root/.ssh/id_rsa.pub
+      src: /home/admin/.ssh/id_rsa.pub
       dest: /tmp/clave/
       flat: yes

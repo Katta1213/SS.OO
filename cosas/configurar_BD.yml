@@ -42,9 +42,10 @@
 
   - name: Crear usuario para la ejecucion de los triggers, (el que aparece como definer en el mysqldump)
     community.mysql.mysql_user:
+      name: diego.ibanez
+      password: ickkckak
+      priv: "*.*:ALL,GRANT"
+      state: present
+      host: "%"
       login_user: root
       login_password: 20jCloquitolocoloco#++++
-      state: present
-      name: diego.ibanez
-      password: fraganciadesomunal
-      priv: "*.*:ALL,GRANT"

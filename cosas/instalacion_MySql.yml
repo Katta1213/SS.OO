@@ -1,13 +1,4 @@
----
-  - name: instalar repo epel-release
-    ansible.builtin.yum:
-      #name: epel-release
-      name: https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
-  
-  - name: Instalar Rsync
-    ansible.builtin.yum:
-      name: rsync
- 
+--- 
   - name: instalar repo mysql-community
     ansible.builtin.yum:
       name: https://dev.mysql.com/get/mysql80-community-release-el7-6.noarch.rpm

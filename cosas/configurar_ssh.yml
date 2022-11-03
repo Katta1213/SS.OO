@@ -28,6 +28,12 @@
       regexp: '^PasswordAuthentication\ yes'
       line: PasswordAuthentication no
 
+  - name: Desactivar esa cosa que rompe los huevos
+    ansible.builtin.lineinfile:
+      path: /etc/ssh/ssh_config
+      regexp: '^#   StrictHostKeyChecking'
+      line: StrictHostKeyChecking no
+
   - name: Restringir SSH a determinados usuarios
     ansible.builtin.lineinfile:
       path: /etc/ssh/sshd_config
