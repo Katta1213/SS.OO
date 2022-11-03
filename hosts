@@ -9,10 +9,10 @@
 #   - A hostname/ip can be a member of multiple groups
 
 [Servidores_BD]
-192.168.32.117 anisble_ssh_user="root" ansible_ssh_pass="root" ansible_port=22
+192.168.220.117 anisble_ssh_user="root" ansible_ssh_pass="root" ansible_port=22
 
 [Servidores_Replicacion_BD]
-192.168.32.100 anisble_ssh_user="root" ansible_ssh_pass="root" ansible_port=22
+192.168.220.100 anisble_ssh_user="root" ansible_ssh_pass="root" ansible_port=22
 
 [Servidores_Respaldo]
-192.168.32.180 anisble_ssh_user="root" ansible_ssh_pass="root" ansible_port=22
+192.168.220.180 anisble_ssh_user="root" ansible_ssh_pass="root" ansible_port=22

@@ -6,7 +6,7 @@
     - include_tasks: cosas/instalacion_MySql.yml
     - include_tasks: cosas/configurar_BD.yml
     - include_tasks: cosas/configurar_usuarios.yml
-      #    - include_tasks: cosas/configurar_ssh.yml
+    - include_tasks: cosas/configurar_ssh.yml
 
   become: true
   become_user: root
@@ -20,7 +20,7 @@
     - include_tasks: cosas/configurar_usuarios.yml
     - include_tasks: cosas/crear_y_obtener_clave_publica.yml
     - include_tasks: cosas/configurar_crontab.yml
-      #    - include_tasks: cosas/configurar_ssh.yml
+    - include_tasks: cosas/configurar_ssh.yml
 
   become: true
   become_user: root
@@ -31,7 +31,7 @@
     - include_tasks: cosas/instalacion_utilidades.yml
     - include_tasks: cosas/configurar_usuarios.yml
     - include_tasks: cosas/copiar_clave_rsa_obtenida.yml
-      # - include_tasks: cosas/configurar_ssh.yml
+    - include_tasks: cosas/configurar_ssh.yml
 
   become: true
   become_user: root
