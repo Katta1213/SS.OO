@@ -1,4 +1,4 @@
-CREATE DATABASE  IF NOT EXISTS `codelaw` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;
+﻿CREATE DATABASE  IF NOT EXISTS `codelaw` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;
 USE `codelaw`;
 -- MySQL dump 10.13  Distrib 8.0.21, for Win64 (x86_64)
 --
@@ -80,11 +80,10 @@ UNLOCK TABLES;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
 /*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
-/*!50003 CREATE*/ /*!50017 DEFINER=`root`@`%`*/ /*!50003 TRIGGER VerificarFechaCompetencia
+/*!50003 CREATE*/ /*!50017 DEFINER=`diego.ibanez`@`%`*/ /*!50003 TRIGGER VerificarFechaCompetencia
 BEFORE INSERT ON Competencia
 FOR EACH ROW
 BEGIN
-
 IF (NEW.FechaInicio >= NEW.FechaFin) THEN
            SIGNAL SQLSTATE '45000'
 		   SET MESSAGE_TEXT = 'FechaInicio no puede ser mayor a FechaFin';
@@ -219,12 +218,10 @@ DELIMITER ;;
 BEFORE INSERT ON EcontieneE
 FOR EACH ROW
 BEGIN
-
 IF (select exists(select IdEncuentro from EcontieneE WHERE IdEncuentro = NEW.IdEncuentro) = 1) THEN
            SIGNAL SQLSTATE '45000'
 		   SET MESSAGE_TEXT = 'El encuentro ya existe';
 END IF;
-
 END */;;
 DELIMITER ;
 /*!50003 SET sql_mode              = @saved_sql_mode */ ;
@@ -298,12 +295,10 @@ DELIMITER ;;
 BEFORE INSERT ON EparticipaEn
 FOR EACH ROW
 BEGIN
-
 IF (NEW.IdEquipo not in (select p.IdEquipo from ParticipaEn p WHERE p.IdEncuentro = NEW.IdEncuentro AND p.IdEquipo = NEW.IdEquipo)) THEN
            SIGNAL SQLSTATE '45000'
 		   SET MESSAGE_TEXT = 'El equipo no existe en ParticipaEn';
 END IF;
-
 END */;;
 DELIMITER ;
 /*!50003 SET sql_mode              = @saved_sql_mode */ ;
@@ -323,12 +318,10 @@ DELIMITER ;;
 BEFORE INSERT ON EparticipaEn
 FOR EACH ROW
 BEGIN
-
 IF (select exists(select IdEquipo from EparticipaEn WHERE IdEquipo = NEW.IdEquipo AND IdEncuentro = NEW.IdEncuentro) = 1) THEN
            SIGNAL SQLSTATE '45000'
 		   SET MESSAGE_TEXT = 'El equipo ya cuenta con un puntaje';
 END IF;
-
 END */;;
 DELIMITER ;
 /*!50003 SET sql_mode              = @saved_sql_mode */ ;
@@ -487,12 +480,10 @@ DELIMITER ;;
 BEFORE INSERT ON ParticipaEn
 FOR EACH ROW
 BEGIN
-
 IF (select exists(select IdDeportista,IdEquipo from DintegraE WHERE IdDeportista = NEW.IdDeportista and IdEquipo = NEW.IdEquipo) = 0) THEN
            SIGNAL SQLSTATE '45000'
 		   SET MESSAGE_TEXT = 'El deportista no integra el equipo';
 END IF;
-
 END */;;
 DELIMITER ;
 /*!50003 SET sql_mode              = @saved_sql_mode */ ;
@@ -512,11 +503,9 @@ DELIMITER ;;
 AFTER DELETE ON ParticipaEn
 FOR EACH ROW
 BEGIN
-
 IF (select IdDeportista from ParticipaEn WHERE IdEncuentro = OLD.IdEncuentro AND IdEquipo = OLD.IdEquipo AND IdDeportista = OLD.IdDeportista )IS NULL THEN
            DELETE FROM EparticipaEn WHERE IdEncuentro = OLD.IdEncuentro AND IdEquipo = OLD.IdEquipo;
 END IF;
-
 END */;;
 DELIMITER ;
 /*!50003 SET sql_mode              = @saved_sql_mode */ ;
@@ -547,7 +536,7 @@ CREATE TABLE `Publicidad` (
 
 LOCK TABLES `Publicidad` WRITE;
 /*!40000 ALTER TABLE `Publicidad` DISABLE KEYS */;
-INSERT INTO `Publicidad` VALUES (1,'no se','jajajaj','yeah',1);
+INSERT INTO `Publicidad` VALUES (1,'grupo 1','jajajaj','%TMP%\\Imagenes\\Publicidad\\1.png',1),(2,'grupo 2','jajajaj','%TMP%\\Imagenes\\Publicidad\\2.png',1),(3,'grupo 3','jajajaj','%TMP%\\Imagenes\\Publicidad\\3.png',1),(4,'grupo 4','jajajaj','%TMP%\\Imagenes\\Publicidad\\4.png',1),(5,'grupo 5','jajajaj','%TMP%\\Imagenes\\Publicidad\\5.png',1),(6,'grupo 6','jajajaj','%TMP%\\Imagenes\\Publicidad\\6.png',1),(7,'grupo 7','jajajaj','%TMP%\\Imagenes\\Publicidad\\7.png',1),(8,'grupo 8','jajajaj','%TMP%\\Imagenes\\Publicidad\\8.png',1),(9,'grupo 9','jajajaj','%TMP%\\Imagenes\\Publicidad\\9.png',1);
 /*!40000 ALTER TABLE `Publicidad` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -675,10 +664,8 @@ DELIMITER ;;
 BEFORE INSERT ON UsuscribeC
 FOR EACH ROW
 BEGIN
-
 DECLARE Premium bool;
 SELECT EsPremium INTO Premium FROM Usuario WHERE Id = NEW.IdUsuario;
-
 IF(Premium = 0) THEN
     SIGNAL SQLSTATE '45000'
     SET MESSAGE_TEXT = 'No eres premium, no te puedes suscribir';
@@ -729,10 +716,8 @@ DELIMITER ;;
 BEFORE INSERT ON UsuscribeD
 FOR EACH ROW
 BEGIN
-
 DECLARE Premium bool;
 SELECT EsPremium INTO Premium FROM Usuario WHERE Id = NEW.IdUsuario;
-
 IF(Premium = 0) THEN
     SIGNAL SQLSTATE '45000'
     SET MESSAGE_TEXT = 'No eres premium, no te puedes suscribir';
@@ -783,10 +768,8 @@ DELIMITER ;;
 BEFORE INSERT ON UsuscribeEn
 FOR EACH ROW
 BEGIN
-
 DECLARE Premium bool;
 SELECT EsPremium INTO Premium FROM Usuario WHERE Id = NEW.IdUsuario;
-
 IF(Premium = 0) THEN
     SIGNAL SQLSTATE '45000'
     SET MESSAGE_TEXT = 'No eres premium, no te puedes suscribir';
@@ -837,10 +820,8 @@ DELIMITER ;;
 BEFORE INSERT ON UsuscribeEq
 FOR EACH ROW
 BEGIN
-
 DECLARE Premium bool;
 SELECT EsPremium INTO Premium FROM Usuario WHERE Id = NEW.IdUsuario;
-
 IF(Premium = 0) THEN
     SIGNAL SQLSTATE '45000'
     SET MESSAGE_TEXT = 'No eres premium, no te puedes suscribir';
