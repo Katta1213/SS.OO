@@ -11,8 +11,7 @@
   - name: añadir ejecucion del script de respaldo a crontab
     ansible.builtin.cron:
       name: respaldar
-      #hour: "*/2"
-      minute: "*/1"
+      hour: "*/2"
       user: admin
       job: /home/admin/respaldar.sh
       state: present
